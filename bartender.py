@@ -25,12 +25,8 @@ def answer_questions():
      print key,questions[key]
      answers = raw_input("Please enter in a yes or y or no n if you like the drink: ")
      if answers == 'yes' or answers == 'y':
-      #questions[key] = answer_quest[questions[key]]
-       #questions[key] = answer_quest[questions[key]]
        answer_quest[key] = True
      elif answers == 'no' or answers == 'n':
-       #questions[key] = answer_quest[questions[key]] = answer_quest[key] = False
-       #questions[key] = answer_quest[questions[key]]
        answer_quest[key] = False
      else:
         print 'Please enter yes or no in lower case'
@@ -38,12 +34,10 @@ def answer_questions():
 answer_questions()
 for d in answer_quest:
   print d, answer_quest[d]
-shot = []
 def drinks(answer_questions):
+    shot = []
     for k in answer_quest:
-        if answer_quest[k] == ingredients[k]:
-          d1 = random.choose(ingredients[d1])
-          shot.append(d1)
-    return shot
+        if answer_quest.keys() == ingredients.keys() and answer_quest[k] == True:
+          shot.append(ingredients[k])
+    print random.choice(shot)
 drinks(answer_questions)
-print shot
