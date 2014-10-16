@@ -13,15 +13,25 @@ ingredients = {
     "sweet": ["sugar cube", "spoonful of honey", "spash of cola"],
     "fruity": ["slice of orange", "dash of cassis", "cherry on top"]
 }
-answer_quest = {}
+answer_quest = {
+    "strong":[],
+    "salty" :[],
+    "bitter":[],
+    "sweet" :[],
+    "fruity":[],
+}
 def answer_questions():
     for key in questions:
      print key,questions[key]
      answers = raw_input("Please enter in a yes or y or no n if you like the drink: ")
      if answers == 'yes' or answers == 'y':
-       questions[key] = answer_quest[questions[key]] = answer_quest[key] = True
+      #questions[key] = answer_quest[questions[key]]
+       #questions[key] = answer_quest[questions[key]]
+       answer_quest[key] = True
      elif answers == 'no' or answers == 'n':
-       questions[key] = answer_quest[questions[key]] = answer_quest[key] = False
+       #questions[key] = answer_quest[questions[key]] = answer_quest[key] = False
+       #questions[key] = answer_quest[questions[key]]
+       answer_quest[key] = False
      else:
         print 'Please enter yes or no in lower case'
     return answer_quest
