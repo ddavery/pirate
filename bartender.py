@@ -26,13 +26,13 @@ def answer_questions():
 		    answer_quest[key] = False
 		else:
 			print 'Please enter yes or no in lower case'
-	answer_quest = answer_questions()
+	#rr
 	return answer_quest
 drinks1 = answer_questions()
 def drinks(drinks1):
 	shot = []
 	for k in drinks1:
-		if drinks1.keys() == ingredients.keys() and drinks1[k]:
-		  shot.append(ingredients[k])
-	print random.choice(shot)
-drinks(answer_questions)
+		if drinks1[k]:
+		  shot.append(random.choice(ingredients[k]))
+	print shot
+drinks(drinks1)
